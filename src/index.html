@@ -1,16 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Syncfusion TypeScript Spreadsheet</title>
+    <title>HTML5 Spreadsheet Studio</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <meta name="description" content="Syncfusion TypeScript Spreadsheet" />
-    <meta name="author" content="Syncfusion" />
+    <meta name="description" content="A spreadsheet viewer and editor built with HTML5, CSS, and vanilla JavaScript." />
+    <meta name="author" content="hbo-office-suite" />
     <link rel="shortcut icon" href="resources/favicon.ico" />
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.1/dist/xlsx.full.min.js"></script>
 </head>
 <body>
-    <!-- Element which will render as Spreadsheet -->
-    <div id="element"></div>
+    <div class="app-shell">
+        <header class="app-header">
+            <div>
+                <h1>HTML5 spreadsheet studio</h1>
+                <p>Open, edit, and export CSV and XLSX spreadsheets without Node.js or a build step.</p>
+            </div>
+            <div class="toolbar">
+                <label class="file-button">
+                    <span>Import file</span>
+                    <input id="fileInput" type="file" accept=".csv,.xls,.xlsx" />
+                </label>
+                <button id="addRowBtn" type="button">Add row</button>
+                <button id="addColBtn" type="button">Add column</button>
+                <button id="resetBtn" type="button">Reset sheet</button>
+                <button id="exportCsvBtn" type="button">Export CSV</button>
+                <button id="exportXlsxBtn" type="button">Export XLSX</button>
+            </div>
+        </header>
+
+        <div id="status" class="status">Ready to edit a spreadsheet.</div>
+        <div id="spreadsheet" class="sheet-shell"></div>
+    </div>
+
+    <script src="./app/app.js"></script>
 </body>
 </html>
