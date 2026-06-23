@@ -1,28 +1,19 @@
-# Getting Started with the JavaScript Spreadsheet Component
+# HTML5 Spreadsheet Studio
 
-A quick-start project that helps you create and configure the Syncfusion JavaScript (TypeScript) Spreadsheet component using Essential JS 2.
+A lightweight spreadsheet viewer and editor built with HTML5, CSS, and vanilla JavaScript. It runs without Node.js, build tools, or package installation.
 
-## Project Prerequisites
+## How to run this application
 
-- Node.js (v14.15.0 or higher)
-- npm
-- Webpack CLI
+1. Open the `src/index.html` file in a browser, or serve the repository with any static web server.
+2. Use the toolbar to import a CSV/XLSX file, edit cells, and export the result back to CSV or XLSX.
 
-## How to run this application?
+## Features
 
-1. Clone the repository.
-2. Open the project folder in Visual Studio Code.
-3. Install the required packages using:
-   ```
-   npm install
-   ```
-4. Run the application using:
-   ```
-   npm start
-   ```
-5. Open the application URL shown in the terminal.
+- Import CSV and XLSX files in the browser
+- Edit spreadsheet cells directly
+- Export back to CSV or XLSX
+- No Node.js, npm, or bundler required
 
-## Documentation
+## Notes
 
-- Getting Started Guide: https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/getting-started
-- Online Demo: https://document.syncfusion.com/demos/spreadsheet-editor/javascript/#/tailwind3/spreadsheet/default.html
+The spreadsheet experience uses the SheetJS library from a CDN, so an internet connection is required the first time the page loads the library.

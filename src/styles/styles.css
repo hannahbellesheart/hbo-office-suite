@@ -1,10 +1,159 @@
-@import '../../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-spreadsheet/styles/tailwind3.css';
+:root {
+  color-scheme: light;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f6fb;
+  color: #122033;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fbff 0%, #eef3ff 100%);
+}
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.2rem;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.app-header h1 {
+  margin: 0 0 0.35rem;
+  font-size: 1.6rem;
+}
+
+.app-header p {
+  margin: 0;
+  color: #4c5c74;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+button,
+.file-button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  background: #294d7a;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(41, 77, 122, 0.16);
+  font-size: 0.95rem;
+}
+
+button:hover,
+.file-button:hover {
+  background: #203d63;
+}
+
+.file-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.file-button input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.status {
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.8rem 1rem;
+  box-shadow: 0 6px 16px rgba(18, 32, 51, 0.08);
+  color: #36516d;
+}
+
+.sheet-shell {
+  overflow: auto;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 12px 32px rgba(18, 32, 51, 0.12);
+  padding: 0.75rem;
+}
+
+.sheet-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 620px;
+}
+
+.sheet-table th,
+.sheet-table td {
+  border: 1px solid #d8e1ea;
+  padding: 0;
+}
+
+.sheet-table th {
+  background: #f7f9fc;
+  color: #294d7a;
+  font-weight: 700;
+  min-width: 3.4rem;
+  height: 2.5rem;
+}
+
+.sheet-table .corner-cell {
+  width: 3rem;
+}
+
+.sheet-table .row-header {
+  width: 3rem;
+}
+
+.sheet-table input {
+  width: 100%;
+  min-width: 8rem;
+  border: none;
+  padding: 0.65rem 0.75rem;
+  font-size: 0.95rem;
+  background: transparent;
+  color: #122033;
+}
+
+.sheet-table input:focus {
+  outline: 2px solid rgba(41, 77, 122, 0.18);
+  outline-offset: -2px;
+  background: #f7fbff;
+}
+
+@media (max-width: 768px) {
+  .app-shell {
+    padding: 0.8rem;
+  }
+
+  .app-header {
+    align-items: stretch;
+  }
+
+  .toolbar {
+    width: 100%;
+  }
+
+  button,
+  .file-button {
+    width: 100%;
+  }
+}
