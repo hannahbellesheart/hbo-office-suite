@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Syncfusion Spreadsheet Studio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="description" content="A full-featured spreadsheet editor powered by Syncfusion EJ2." />
+  <meta name="author" content="hbo-office-suite" />
+
+  <!-- Syncfusion EJ2 Material 3 theme -->
+  <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/26.2.11/material3.css" />
+  <!-- App styles -->
+  <link rel="stylesheet" href="./styles/styles.css" />
+</head>
+<body>
+
+  <div class="app-shell">
+
+    <!-- ── Header ── -->
+    <header class="app-header">
+      <div class="brand">
+        <h1>Syncfusion Spreadsheet Studio</h1>
+        <p>Open, edit, and export spreadsheets — powered by Syncfusion EJ2.</p>
+      </div>
+
+      <div class="toolbar">
+        <!-- hidden file input triggered by the Import button -->
+        <input id="fileInput" type="file" accept=".csv,.xls,.xlsx" style="display:none" />
+        <button id="importBtn"     type="button" title="Open a CSV / XLSX file">Import file</button>
+        <button id="newSheetBtn"   type="button" title="Add a new worksheet">New sheet</button>
+        <button id="exportCsvBtn"  type="button" title="Download as CSV">Export CSV</button>
+        <button id="exportXlsxBtn" type="button" title="Download as XLSX">Export XLSX</button>
+        <button id="resetBtn"      type="button" class="btn-danger" title="Clear the current sheet">Reset sheet</button>
+      </div>
+    </header>
+
+    <!-- ── Status bar ── -->
+    <div id="status" class="status" role="status" aria-live="polite">
+      Ready — open a file or start typing.
+    </div>
+
+    <!-- ── Spreadsheet mount point ── -->
+    <div id="spreadsheet"></div>
+
+  </div>
+
+  <!-- Syncfusion EJ2 bundle (includes Spreadsheet) -->
+  <script src="https://cdn.syncfusion.com/ej2/26.2.11/dist/ej2.min.js"></script>
+  <!-- App logic -->
+  <script src="./app/app.js"></script>
+</body>
+</html>
